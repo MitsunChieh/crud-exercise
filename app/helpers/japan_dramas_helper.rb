@@ -1,0 +1,2 @@
+module JapanDramasHelper
+end
