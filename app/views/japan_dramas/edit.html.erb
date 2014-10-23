@@ -1,14 +1,6 @@
 <%= form_for @drama, :url => japan_drama_path(@drama) do |f| %>
   <table>
-    <%= f.label :name, "Name" %>
-    <%= f.text_field :name %>
-    <br>
-    <%= f.label :date, "Date" %>
-    <%= f.text_area :date %>
-    <br>
-    <%= f.label :actor, "Actor(s)" %>
-    <%= f.text_area :actor %>
-    <br>
+    <%= render 'form', :f => f %>
     <%= f.submit "Update" %>
   </table>
 <% end %>

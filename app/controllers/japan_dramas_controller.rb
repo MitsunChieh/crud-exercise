@@ -29,10 +29,12 @@ class JapanDramasController < ApplicationController
     redirect_to japan_drama_url(@drama)
   end
 
-  def destory
+  def destroy
     @drama.destroy
 
-    redirect_to events_url
+    redirect_to japan_dramas_url
+  end
+
   private
 
   def drama_params
