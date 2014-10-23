@@ -1,10 +1,18 @@
 <!-- _form.html.erb -->
-    <%= f.label :name, "Name" %>
-    <%= f.text_field :name %>
-    <br>
-    <%= f.label :date, "Date" %>
-    <%= f.text_area :date %>
-    <br>
-    <%= f.label :actor, "Actor(s)" %>
-    <%= f.text_area :actor %>
-    <br>
+<% if @drama.errors.any? %>
+  <ul>
+    <% @drama.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= f.label :name, "Name" %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :date, "Date" %>
+<%= f.text_area :date %>
+<br>
+<%= f.label :actor, "Actor(s)" %>
+<%= f.text_area :actor %>
+<br>

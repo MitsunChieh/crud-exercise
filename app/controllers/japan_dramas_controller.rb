@@ -12,26 +12,34 @@ class JapanDramasController < ApplicationController
 
   def create
     @drama = JapanDrama.new(drama_params)
-    @drama.save
 
-    redirect_to japan_dramas_url
+    if @drama.save
+      flash[:notice] = "drama was successfully created"
+      redirect_to japan_dramas_url
+    else
+      render :action => :new
+    end
   end
 
   def show
+    @page_title = @drama.name
   end
 
   def edit
   end
 
   def update
-    @drama.update_attributes(drama_params)
-
-    redirect_to japan_drama_url(@drama)
+    if @drama.update_attributes(drama_params)
+      flash[:notice] = "drama was successfully updated"
+      redirect_to japan_drama_url(@drama)
+    else
+      render :action => :edit
+    end
   end
 
   def destroy
     @drama.destroy
-
+    flash[:alert] = "drama was successfully deleted"
     redirect_to japan_dramas_url
   end
 

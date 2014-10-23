@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CrudExercise</title>
+  <title><%= @page_title || "CrudExercise" %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <p style="color: green"><%= flash[:notice] %></p>
+  <p style="color: red"><%= flash[:alert] %></p>
+  <%= yield %>
 
 </body>
 </html>
