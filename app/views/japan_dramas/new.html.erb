@@ -1,0 +1,14 @@
+<%= form_for @drama, :url => japan_dramas_path do |f| %>
+  <table>
+    <%= f.label :name, "Name" %>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.label :date, "Date" %>
+    <%= f.text_area :date %>
+    <br>
+    <%= f.label :actor, "Actor(s)" %>
+    <%= f.text_area :actor %>
+    <br>
+    <%= f.submit "Create" %>
+  </table>
+<% end %>

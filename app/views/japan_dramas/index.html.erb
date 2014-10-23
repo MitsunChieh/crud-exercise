@@ -1,13 +1,13 @@
 <table>
-<% @dramas.each do |drama| %>
+<% @drama.each do |drama| %>
   <tr>
-    <%= drama.name %>
-  <%= link_to 'Show', japan_drama_path(drama) %>
-  <%= link_to 'Edit', edit_japan_drama_path(drama) %>
-  <%= link_to 'Delete', japan_drama_path(drama) %>
+    <td><%= drama.name %></td>
+    <td><%= link_to 'Show', japan_drama_path(drama) %></td>
+    <td><%= link_to 'Edit', edit_japan_drama_path(drama) %></td>
+    <td><%= link_to 'Delete', japan_drama_path(drama) %></td>
   </tr>
 <% end %>
 </table>
 <%= link_to 'New Event', new_japan_drama_path %>
 
-<%= paginate @dramas %>
+<%= paginate @drama %>
