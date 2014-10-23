@@ -4,7 +4,7 @@
     <td><%= drama.name %></td>
     <td><%= link_to 'Show', japan_drama_path(drama) %></td>
     <td><%= link_to 'Edit', edit_japan_drama_path(drama) %></td>
-    <td><%= link_to 'Delete', japan_drama_path(drama) %></td>
+    <td><%= link_to 'Delete', japan_drama_path(drama), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
