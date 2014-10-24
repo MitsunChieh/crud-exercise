@@ -6,17 +6,24 @@
     <% end %>
   </ul>
 <% end %>
+
 <table>
   <tr>
-    <td><%= f.label :name, "Name:" %></td>
-    <td><%= f.text_field :name %></td>
+    <div class="form-group<%= (f.object.errors[:name].any?)? " has-error" : "" %>">
+      <td><%= f.label :name, "*Name" %></td>
+      <td><%= f.text_field :name, :class => "form-control" %></td>
+    </div>
   </tr>
   <tr>
-    <td><%= f.label :date, "Date:" %></td>
-    <td><%= f.date_select :date %></td>
+    <div class="form-group">
+      <td><%= f.label :date, "Date:" %></td>
+      <td><%= f.date_select :date %></td>
+      </div>
   </tr>
   <tr>
+    <div class="form-group">
     <td><%= f.label :actor, "Actor(s):" %></td>
     <td><%= f.text_area :actor %></td>
+    </div>
   </tr>
 </table>
