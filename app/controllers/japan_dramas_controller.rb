@@ -3,12 +3,12 @@ class JapanDramasController < ApplicationController
   before_action :set_drama, :only => [:show, :edit ,:update, :destroy]
 
   def index
-    @drama = JapanDrama.page(params[:page]).per(10)
+    @drama = JapanDrama.page(params[:page]).per(5)
   end
 
-  def new
-    @drama = JapanDrama.new
-  end
+  # def new
+  #   @drama = JapanDrama.new
+  # end
 
   def create
     @drama = JapanDrama.new(drama_params)

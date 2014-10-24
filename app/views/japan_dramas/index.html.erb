@@ -1,13 +1,24 @@
+<!-- <%= link_to 'New Event', new_japan_drama_path %> -->
 <table>
 <% @drama.each do |drama| %>
   <tr>
     <td><%= drama.name %></td>
     <td><%= link_to 'Show', japan_drama_path(drama) %></td>
     <td><%= link_to 'Edit', edit_japan_drama_path(drama) %></td>
-    <td><%= link_to 'Delete', japan_drama_path(drama), :method => :delete %></td>
+    <td><%= button_to 'Delete', japan_drama_path(drama), :method => :delete %></td>
   </tr>
 <% end %>
 </table>
-<%= link_to 'New Event', new_japan_drama_path %>
 
-<%= paginate @drama %>
+<br>
+
+<span><%= paginate @drama %></span>
+
+<br><br>
+
+<div>
+  <%= form_for @drama = JapanDrama.new do |f| %>
+    <%= render 'form', :f => f %>
+    <%= f.submit "Create" %>
+  <% end %>
+</div>

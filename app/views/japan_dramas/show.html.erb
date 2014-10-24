@@ -1,5 +1,9 @@
-<%= @drama.name %> <br>
-<%= @drama.date%> <br>
-<%= simple_format(@drama.actor) %>
+<table>
+  <tr>
+    <td><%= @drama.name %></td>
+    <td><%= @drama.date%></td>
+    <td><%= simple_format(@drama.actor) %></td>
+  </tr>
+</table>
 
 <p><%= link_to 'Back to index', japan_dramas_path %></p>

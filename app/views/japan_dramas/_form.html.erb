@@ -6,13 +6,17 @@
     <% end %>
   </ul>
 <% end %>
-
-<%= f.label :name, "Name" %>
-<%= f.text_field :name %>
-<br>
-<%= f.label :date, "Date" %>
-<%= f.text_area :date %>
-<br>
-<%= f.label :actor, "Actor(s)" %>
-<%= f.text_area :actor %>
-<br>
+<table>
+  <tr>
+    <td><%= f.label :name, "Name:" %></td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :date, "Date:" %></td>
+    <td><%= f.date_select :date %></td>
+  </tr>
+  <tr>
+    <td><%= f.label :actor, "Actor(s):" %></td>
+    <td><%= f.text_area :actor %></td>
+  </tr>
+</table>
