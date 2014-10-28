@@ -13,9 +13,9 @@
 <% @dramas.each do |drama| %>
   <tr>
     <td><%= drama.name %></td>
-    <td><%= link_to 'Show', japan_drama_path(drama), class: "btn btn-default" %></td>
-    <td><%= link_to 'Edit', edit_japan_drama_path(drama), class: "btn btn-default" %></td>
-    <td><%= link_to 'Delete', japan_drama_path(drama), class: "btn btn-danger", :method => :delete, :data => { :confirm=> "Are you sure?" } %></td>
+    <td><%= link_to 'Show', japan_drama_path(drama), class: "btn btn-default" %>
+    <%= link_to 'Edit', edit_japan_drama_path(drama), class: "btn btn-default" %>
+    <%= link_to 'Delete', japan_drama_path(drama), class: "btn btn-danger", :method => :delete, :data => { :confirm=> "Are you sure?" } %></td>
   </tr>
 <% end %>
 </table>
